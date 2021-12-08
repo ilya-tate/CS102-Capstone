@@ -21,10 +21,10 @@
     "etag": "^1.8.1",
     "express": "^4.17.1",
     "finalhandler": "^1.1.2",
+    "forwarded": "^0.2.0",
     "fresh": "^0.5.2",
     "http-errors": "^1.7.2",
     "iconv-lite": "^0.4.24",
-    "forwarded": "^0.2.0",
     "inherits": "^2.0.3",
     "ipaddr.js": "^1.9.1",
     "media-typer": "^0.3.0",
@@ -33,6 +33,7 @@
     "mime": "^1.6.0",
     "mime-db": "^1.51.0",
     "mime-types": "^2.1.34",
+    "mongoose": "^6.1.0",
     "ms": "^2.0.0",
     "negotiator": "^0.6.2",
     "on-finished": "^2.3.0",
@@ -50,11 +51,10 @@
     "statuses": "^1.5.0",
     "toidentifier": "^1.0.0",
     "type-is": "^1.6.18",
-    "utils-merge": "^1.0.1",
     "unpipe": "^1.0.0",
+    "utils-merge": "^1.0.1",
     "vary": "^1.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
