@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const schema = new mongoose.Schema({
+const Schema = new mongoose.Schema({
   id: {
     type: Number,
     required: true
@@ -19,8 +19,8 @@ const schema = new mongoose.Schema({
   },
   image: {
     type: String,
-    required: true
+    required: false
   }
 });
 
-module.exports(mongoose.model("Mom"), schema);
+module.exports(mongoose.model("Mom"), Schema);
