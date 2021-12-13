@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const Schema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true
+  },
   item: [
     {
       id: {
