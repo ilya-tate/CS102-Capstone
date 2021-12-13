@@ -9,7 +9,7 @@ const {
   updateMom,
 } = require('../controllers/momController');
 
-router.route('/moms').get(getAllMoms).post(createMom);
-router.route('/moms/:id').get(getMom).patch(updateMom).delete(deleteMom);
+router.route('/').get(getAllMoms).post(createMom);
+router.route('/:id').get(getMom).patch(updateMom).delete(deleteMom);
 
 module.exports = router;
