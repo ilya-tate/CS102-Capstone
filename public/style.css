@@ -13,3 +13,9 @@
   margin: 0;
   width: 100vw;
 }
+
+.product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
