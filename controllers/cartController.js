@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const { NotFoundError } = require("../middleware");
-const { BadRequestError } = require("../errors");
-const Cart = require("../models/Cart");
+const { NotFoundError } = require('../middleware');
+const { BadRequestError } = require('../errors');
+const Cart = require('../models/Cart');
 
 const createCart = async (req, res) => {
   const cart = await Cart.create(req.body);
@@ -35,16 +35,17 @@ const getAllCarts = async (req, res) => {
 };
 
 const updateCart = async (req, res) => {
-  const { id, item } = req.body;
+  const { id } = req.params;
+  const item = req.body;
   if (!item) {
     throw new BadRequestError('Cart must not be empty');
   }
-  const cart = await Cart.findByIdAndUpdate(
-    { id },
-    { new: true, runValidators: true }
-  );
+  const cart = await Cart.findByIdAndUpdate(id, item, {
+    new: true,
+    runValidators: true,
+  });
   if (!cart) {
-    throw new NotFoundError(`No cart with is ${id}`);
+    throw new NotFoundError(`No cart with id ${id}`);
   }
   res.status(200).json(cart);
 };
